@@ -1,0 +1,37 @@
+extends layout
+block content
+    .row.page-header
+        .col-lg-12 
+            h1 Starbucks 
+    .row
+        .col-xs-12.col-sn-6 
+        .col-xs-12.col-sn-6
+            .panel.panel-primary
+                .panel-heading 
+                    h2.panel-title Konum Bilgisi 
+                .panel-body 
+                    -var enlem=37.78
+                    -var boylam=30.56
+                    img.img-responsive.img-rounded(src='http://maps.googleapis.com/maps/api/staticmap?center='+enlem+','+boylam+
+                    '&zoom=12&size=600x400&markers='+enlem+','+boylam+' &key=AIzaSyCmmKygTpBzHGOZEciJpAdxC9v_tWHagnE')
+                    
+    .row
+        .col-xs-12 
+            .panel.panel-primary
+                .panel-heading
+                    a.btn.btn-default.pull-right(href='/mekan/yorum/yeni') Yorum Ekle
+                    h2.panel-title Müşteri Yorumları
+                .panel-body.rewiew-container
+                    .row
+                        .rewiew 
+                            .well.well-sm.review.header
+                                span.rating 
+                                span.glyphicon.glypicon-star 
+                                span.glyphicon.glypicon-star
+                                span.glyphicon.glypicon-star
+                                span.glyphicon.glypicon-star
+                                span.glyphicon.glypicon-star-empty
+                                span.review-author Erhan Ece
+                                small.reviewTimestamp &nbsp; 13 Ekim 2022
+                            .col-xs-12 
+                                p Fena değil.
